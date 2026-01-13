@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dịch vụ nha khoa</title>
+        <link rel="stylesheet" href="trang1,2,3.css" />
+    </head>
+    <body>
+        <h1>Danh sách dịch vụ</h1>
+
+        <div class="menu">
+            <a href="index.html">Trang chủ</a>&nbsp;
+            <a href="services.html">Dịch vụ</a>&nbsp;
+            <a href="appointment.html">Đăng ký lịch khám</a>
+        </div>
+        <br />
+        <br />
+        <div class="section">
+            <table>
+                <tr>
+                    <th>Tên dịch vụ</th>
+                    <th>Mô tả</th>
+                    <th>Giá</th>
+                </tr>
+                <tr>
+                    <td>Khám răng tổng quát</td>
+                    <td>Kiểm tra răng miệng</td>
+                    <td>100.000đ</td>
+                </tr>
+                <tr>
+                    <td>Lấy cao răng</td>
+                    <td>Làm sạch mảng bám</td>
+                    <td>200.000đ</td>
+                </tr>
+                <tr>
+                    <td>Niềng răng</td>
+                    <td>Chỉnh nha</td>
+                    <td>Từ 20.000.000đ</td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="footer">
+            <p>© 2026 Nha Khoa Chăm Sóc Nụ Cười Việt</p>
+            <p>Địa chỉ: 123 Đường Nụ Cười – Hotline: 0900 000 000</p>
+        </div>
+        <script>
+  // Chặn menu chuột phải
+  document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+  // Chặn chọn văn bản (không tuyệt đối)
+  document.addEventListener("selectstart", (e) => e.preventDefault());
+
+  // Chặn kéo thả
+  document.addEventListener("dragstart", (e) => e.preventDefault());
+  document.addEventListener("keydown", (e) => {
+    const k = e.key.toLowerCase();
+
+    // F12
+    if (e.key === "F12") e.preventDefault();
+
+    // Ctrl+Shift+I / J / C (Chrome/Edge)
+    if (e.ctrlKey && e.shiftKey && (k === "i" || k === "j" || k === "c"))
+      e.preventDefault();
+
+    // Ctrl+U (view source)
+    if (e.ctrlKey && k === "u") e.preventDefault();
+
+    // Cmd+Opt+I (macOS)
+    if (e.metaKey && e.altKey && k === "i") e.preventDefault();
+  });
+ 
+</script>
+    </body>
+</html>
